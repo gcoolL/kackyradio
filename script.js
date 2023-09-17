@@ -1,5 +1,4 @@
 let songplaying = document.getElementById("songplaying")
-const webhook = "https://discord.com/api/webhooks/1149371006935375882/LXJHo2uLbSuHJ7nwFolKplR7pwC-rZhK_MHasmb7ZAtPiHyLmOSFn_L9c3R3a0K_gsZ-"
 let videotitle = ""
 let reloaded = false
 let firstTime = true
@@ -36,19 +35,6 @@ function viddings() {
       }
     }
   }
-}
-
-function playlistupdated() {
-  fetch(webhook, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    content: '<@&1149373179911995505> The playlist updated! https://kackyradio.gcooll.repl.co'
-  })
-});
-
 }
 
 //onPlayerReady = player.loadPlaylist({'listType': 'playlist', 'list': 'PLnvUrpVRP3rVpgekABeSXD_jixTwGB_ts','index': Math.floor(Math.random()*(player.getPlaylist().length-1)),'startSeconds': '0','suggestedQuality': 'hd720'});
