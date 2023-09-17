@@ -57,7 +57,7 @@ setInterval(function() {
   if (player && player.getPlaylist()) {
     if (player.getDuration() && player.getCurrentTime()) {
       let timerem = player.getDuration() - player.getCurrentTime()
-      if (timerem < 1) {
+      if (timerem < 0.5) {
         if (done == false) {
           done = true
           console.log(timerem)
