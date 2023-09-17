@@ -13,6 +13,7 @@ function viddings() {
       videotitle = ""
       if (player.getPlaylist()) {
         player.loadPlaylist({'listType': 'playlist', 'list': 'PLnvUrpVRP3rVpgekABeSXD_jixTwGB_ts','index': Math.floor(Math.random()*(player.getPlaylist().length)),'startSeconds': '0','suggestedQuality': 'hd720'});
+        player.playVideo()
         videotitle = player.videoTitle
         reloaded = false
       }
