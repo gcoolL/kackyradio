@@ -55,16 +55,14 @@
           setInterval(viddings, 10)
         }
 
-        function onPlayerStateChange(event) {        
-          if(event.data === 0) {          
-            if (player) {
-              if (player.getPlaylistIndex() === player.getPlaylist().length-1) {
-                console.log("previousVideo")
-                player.previousVideo()
-              } else {
-                console.log("nextVideo")
-                player.nextVideo()
-              }
+        function onPlayerStateChange(event) {     
+          if (player.playerInfo.playerState === 0) {
+            if (player.getPlaylistIndex() === player.getPlaylist().length-1) {
+              console.log("previousVideo")
+              player.previousVideo()
+            } else {
+              console.log("nextVideo")
+              player.nextVideo()
             }
           }
         }
