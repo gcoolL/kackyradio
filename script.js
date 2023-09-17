@@ -54,7 +54,7 @@ function playlistupdated() {
 //onPlayerReady = player.loadPlaylist({'listType': 'playlist', 'list': 'PLnvUrpVRP3rVpgekABeSXD_jixTwGB_ts','index': Math.floor(Math.random()*(player.getPlaylist().length-1)),'startSeconds': '0','suggestedQuality': 'hd720'});
 
 setInterval(function() {
-  if (player && player.getPlaylist()) {
+  if (player) {
     if (player.getDuration() && player.getCurrentTime()) {
       let timerem = player.getDuration() - player.getCurrentTime()
       if (timerem < 0.5) {
