@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kacky "radio" - gcoolL</title>
+  <link rel="icon" type="image/webp" href="https://cdn.7tv.app/emote/6100465ea0d2603f0699af47/3x.webp"/>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>This is a kacky "radio" website.</h1>
+    </header>
+    
+    <main>
+      <img src="https://cdn.7tv.app/emote/6100465ea0d2603f0699af47/3x.webp" title="xdd">
+      <h2>This isn't an actual radio.</h2>
+      <h3 id="songplaying">No songs playing. (If Javascript is enabled, please wait...)</h3>
+      <div id="player"></div>
+  
+      <script>
+  
+        var tag = document.createElement('script');
+      
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            events: {
+              'onReady': onPlayerReady
+            }
+      
+          });
+        }
+      
+        function onPlayerReady(event) {
+          player.loadPlaylist({
+            'listType': 'playlist',
+            'list': 'PLnvUrpVRP3rVpgekABeSXD_jixTwGB_ts',
+            //'index': random_number,
+            'startSeconds': '0',
+            'suggestedQuality': 'hd720'
+          });
+          setInterval(viddings, 10)
+        }
+      </script>
+    </main>
+    
+    <footer>
+      <p>Credits to <a target="_blank" href="https://youtube.com/@guthix744">Guthix744</a> for the <a target="_blank" href="https://youtube.com/playlist?list=PLnvUrpVRP3rVpgekABeSXD_jixTwGB_ts&si=Ge7uYYzX6Xs34HRL">playlist</a>!</p>
+      
+      <p>I randomly made a discord server if you want to join, please click <a target="_blank" href="https://discord.gg/AuyupJWMFH">here</a> or use <a target="_blank" href="https://discord.gg/AuyupJWMFH">https://discord.gg/AuyupJWMFH</a>.</p>
+      
+      <img src="https://cdn.7tv.app/emote/621e818de49c1245004bc84e/1x.webp"<p> replit sucks</p>
+    </footer>
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
