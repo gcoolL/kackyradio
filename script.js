@@ -54,7 +54,7 @@ function playlistupdated() {
 
 //onPlayerReady = player.loadPlaylist({'listType': 'playlist', 'list': 'PLnvUrpVRP3rVpgekABeSXD_jixTwGB_ts','index': Math.floor(Math.random()*(player.getPlaylist().length-1)),'startSeconds': '0','suggestedQuality': 'hd720'});
 
-setInterval(function() {
+/*setInterval(function() {
   if (event && event.data) {
     function onPlayerStateChange(event) {        
       if(event.data === 0) {          
@@ -70,7 +70,7 @@ setInterval(function() {
       }
     }
   }
-  /*if (player) {
+  if (player) {
     if (player.getDuration() && player.getCurrentTime()) {
       let timerem = player.getDuration() - player.getCurrentTime()
       if (timerem < 0.5) {
@@ -89,5 +89,5 @@ setInterval(function() {
         done = false
       }
     }
-  }*/
-}, 1)
+  }
+}, 1)*/
