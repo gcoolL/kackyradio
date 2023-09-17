@@ -56,7 +56,7 @@
         }
 
         function onPlayerStateChange(event) {     
-          console.log("wahappen")
+          console.log(event.data)
           if (player.playerInfo.playerState === 0) {
             if (player.getPlaylistIndex() === player.getPlaylist().length-1) {
               console.log("previousVideo")
