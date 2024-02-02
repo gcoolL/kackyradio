@@ -21,7 +21,7 @@ function viddings() {
       videotitle = player.videoTitle
       if (player.videoTitle == "") {
         document.title = "kackyradio - gcoolL (none playing)"
-        songplaying.innerHTML = "No songs playing. (If Javascript is enabled, please wait...)"
+        songplaying.innerHTML = "No songs playing; please wait..."
       } else {
         document.title = videotitle
         songplaying.innerHTML = "Song playing: "+videotitle
@@ -46,12 +46,9 @@ setInterval(function() {
       if (timerem < 0.5) {
         if (done == false) {
           done = true
-          console.log(timerem)
           if (player.getPlaylistIndex() === player.getPlaylist().length-1) {
-            console.log("previousVideo")
             player.previousVideo()
           } else {
-            console.log("nextVideo")
             player.nextVideo()
           }
         }
